@@ -1353,7 +1353,7 @@ class GUI(Gtk.ApplicationWindow):
         hbar.pack_end(self.update_button)
         self.update_button.set_no_show_all(True)
         self.update_button.hide()
-        hbar.props.show_close_button = True
+        # hbar.props.show_close_button = True
         hbar.props.title = APP_NAME
 
         box = Gtk.Box()
@@ -1392,8 +1392,8 @@ class GUI(Gtk.ApplicationWindow):
         # Add hamburger menu on the right.
         # This is not needed for Microsoft Windows because other code places its
         # menu on the left side.
-        if os.name == 'nt':
-            return hbar
+        ##if os.name == 'nt':
+            ##return hbar
         menu_button = Gtk.MenuButton()
         icon = Gio.ThemedIcon(name="open-menu-symbolic")
         image = Gtk.Image.new_from_gicon(icon, Gtk.IconSize.BUTTON)
@@ -1555,8 +1555,8 @@ class GUI(Gtk.ApplicationWindow):
             self.set_icon_from_file(appicon_path)
 
         # add headerbar
-        self.headerbar = self.create_headerbar()
-        self.set_titlebar(self.headerbar)
+        # self.headerbar = self.create_headerbar()
+        # self.set_titlebar(self.headerbar)
 
         # split main window twice
         hbox = Gtk.Box(homogeneous=False)
